@@ -1,0 +1,1064 @@
+login as: ubuntu
+Authenticating with public key "imported-openssh-key"
+Welcome to Ubuntu 20.04.5 LTS (GNU/Linux 5.15.0-1019-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Oct 17 17:53:17 UTC 2022
+
+  System load:  0.0               Processes:             109
+  Usage of /:   19.9% of 7.57GB   Users logged in:       0
+  Memory usage: 6%                IPv4 address for eth0: 172.31.40.224
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Mon Oct 17 17:48:44 2022 from 117.247.58.175
+ubuntu@Node--1:~$ sudo hostname Master
+ubuntu@Node--1:~$ sudo su
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# root@Master:/home/ubuntu#
+bash: root@Master:/home/ubuntu#: No such file or directory
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# {
+> sudo apt-get update
+> sudo apt-get install apt-transport-https
+> sudo apt install -y curl docker.io
+> sudo systemctl start docker
+> sudo systemctl enable docker
+> curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+> sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+> apt-get update
+> sudo apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+> sudo swapoff -a
+> }
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1785 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [297 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [11.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1241 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [176 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [596 B]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [737 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [136 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [15.3 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5376 B]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [508 B]
+Get:18 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:19 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:20 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:21 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:22 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:23 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2158 kB]
+Get:24 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [381 kB]
+Get:25 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.0 kB]
+Get:26 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1332 kB]
+Get:27 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [188 kB]
+Get:28 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [592 B]
+Get:29 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [968 kB]
+Get:30 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [221 kB]
+Get:31 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [21.8 kB]
+Get:32 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+Get:33 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7316 B]
+Get:34 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [588 B]
+Get:35 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [45.6 kB]
+Get:36 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+Get:37 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1420 B]
+Get:38 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:39 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [23.9 kB]
+Get:40 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.0 kB]
+Get:41 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+Get:42 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 24.5 MB in 5s (4742 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 37 not upgraded.
+Need to get 1704 B of archives.
+After this operation, 162 kB of additional disk space will be used.
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1704 B]
+Fetched 1704 B in 0s (6561 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... 61718 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.9_all.deb ...
+Unpacking apt-transport-https (2.0.9) ...
+Setting up apt-transport-https (2.0.9) ...
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+curl is already the newest version (7.68.0-1ubuntu2.13).
+curl set to manually installed.
+The following additional packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base libidn11 pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base docker.io libidn11 pigz runc ubuntu-fan
+0 upgraded, 9 newly installed, 0 to remove and 37 not upgraded.
+Need to get 69.2 MB of archives.
+After this operation, 334 MB of additional disk space will be used.
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 bridge-utils amd64 1.6-2ubuntu1 [30.5 kB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 runc amd64 1.1.0-0ubuntu1~20.04.1 [3892 kB]
+Get:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 containerd amd64 1.5.9-0ubuntu1~20.04.4 [33.0 MB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 dns-root-data all 2019052802 [5300 B]
+Get:6 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 libidn11 amd64 1.33-2.2ubuntu2 [46.2 kB]
+Get:7 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 dnsmasq-base amd64 2.80-1.1ubuntu1.5 [315 kB]
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/universe amd64 docker.io amd64 20.10.12-0ubuntu2~20.04.1 [31.8 MB]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 ubuntu-fan all 0.12.13ubuntu0.1 [34.4 kB]
+Fetched 69.2 MB in 7s (10.3 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 61722 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.6-2ubuntu1_amd64.deb ...
+Unpacking bridge-utils (1.6-2ubuntu1) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../2-runc_1.1.0-0ubuntu1~20.04.1_amd64.deb ...
+Unpacking runc (1.1.0-0ubuntu1~20.04.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../3-containerd_1.5.9-0ubuntu1~20.04.4_amd64.deb ...
+Unpacking containerd (1.5.9-0ubuntu1~20.04.4) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../4-dns-root-data_2019052802_all.deb ...
+Unpacking dns-root-data (2019052802) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../5-libidn11_1.33-2.2ubuntu2_amd64.deb ...
+Unpacking libidn11:amd64 (1.33-2.2ubuntu2) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../6-dnsmasq-base_2.80-1.1ubuntu1.5_amd64.deb ...
+Unpacking dnsmasq-base (2.80-1.1ubuntu1.5) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../7-docker.io_20.10.12-0ubuntu2~20.04.1_amd64.deb ...
+Unpacking docker.io (20.10.12-0ubuntu2~20.04.1) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../8-ubuntu-fan_0.12.13ubuntu0.1_all.deb ...
+Unpacking ubuntu-fan (0.12.13ubuntu0.1) ...
+Setting up runc (1.1.0-0ubuntu1~20.04.1) ...
+Setting up dns-root-data (2019052802) ...
+Setting up libidn11:amd64 (1.33-2.2ubuntu2) ...
+Setting up bridge-utils (1.6-2ubuntu1) ...
+Setting up pigz (2.4-1) ...
+Setting up containerd (1.5.9-0ubuntu1~20.04.4) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker.io (20.10.12-0ubuntu2~20.04.1) ...
+Adding group `docker' (GID 119) ...
+Done.
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Setting up dnsmasq-base (2.80-1.1ubuntu1.5) ...
+Setting up ubuntu-fan (0.12.13ubuntu0.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /lib/systemd/system/ubuntu-fan.service.
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+OK
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:3 https://packages.cloud.google.com/apt kubernetes-xenial InRelease [9383 B]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 Packages [60.6 kB]
+Fetched 70.0 kB in 1s (69.0 kB/s)
+Reading package lists... Done
+Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:2 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
+Hit:4 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  conntrack cri-tools ebtables socat
+Suggested packages:
+  nftables
+The following NEW packages will be installed:
+  conntrack cri-tools ebtables kubeadm kubectl kubelet kubernetes-cni socat
+0 upgraded, 8 newly installed, 0 to remove and 37 not upgraded.
+Need to get 81.6 MB of archives.
+After this operation, 327 MB of additional disk space will be used.
+Get:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 conntrack amd64 1:1.4.5-2 [30.3 kB]
+Get:2 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 cri-tools amd64 1.25.0-00 [17.9 MB]
+Get:3 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 ebtables amd64 2.0.11-3build1 [80.3 kB]
+Get:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+Get:4 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubernetes-cni amd64 1.1.1-00 [25.0 MB]
+Get:6 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubelet amd64 1.25.3-00 [19.5 MB]
+Get:7 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubectl amd64 1.25.3-00 [9503 kB]
+Get:8 https://packages.cloud.google.com/apt kubernetes-xenial/main amd64 kubeadm amd64 1.25.3-00 [9220 kB]
+Fetched 81.6 MB in 5s (15.3 MB/s)
+Selecting previously unselected package conntrack.
+(Reading database ... 62078 files and directories currently installed.)
+Preparing to unpack .../0-conntrack_1%3a1.4.5-2_amd64.deb ...
+Unpacking conntrack (1:1.4.5-2) ...
+Selecting previously unselected package cri-tools.
+Preparing to unpack .../1-cri-tools_1.25.0-00_amd64.deb ...
+Unpacking cri-tools (1.25.0-00) ...
+Selecting previously unselected package ebtables.
+Preparing to unpack .../2-ebtables_2.0.11-3build1_amd64.deb ...
+Unpacking ebtables (2.0.11-3build1) ...
+Selecting previously unselected package kubernetes-cni.
+Preparing to unpack .../3-kubernetes-cni_1.1.1-00_amd64.deb ...
+Unpacking kubernetes-cni (1.1.1-00) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../4-socat_1.7.3.3-2_amd64.deb ...
+Unpacking socat (1.7.3.3-2) ...
+Selecting previously unselected package kubelet.
+Preparing to unpack .../5-kubelet_1.25.3-00_amd64.deb ...
+Unpacking kubelet (1.25.3-00) ...
+Selecting previously unselected package kubectl.
+Preparing to unpack .../6-kubectl_1.25.3-00_amd64.deb ...
+Unpacking kubectl (1.25.3-00) ...
+Selecting previously unselected package kubeadm.
+Preparing to unpack .../7-kubeadm_1.25.3-00_amd64.deb ...
+Unpacking kubeadm (1.25.3-00) ...
+Setting up conntrack (1:1.4.5-2) ...
+Setting up kubectl (1.25.3-00) ...
+Setting up ebtables (2.0.11-3build1) ...
+Setting up socat (1.7.3.3-2) ...
+Setting up cri-tools (1.25.0-00) ...
+Setting up kubernetes-cni (1.1.1-00) ...
+Setting up kubelet (1.25.3-00) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/kubelet.service → /lib/systemd/system/kubelet.service.
+Setting up kubeadm (1.25.3-00) ...
+Processing triggers for man-db (2.9.1-1) ...
+root@Master:/home/ubuntu# {
+> sudo kubeadm init
+> mkdir -p $HOME/.kube
+> sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+> sudo chown $(id -u):$(id -g) $HOME/.kube/config
+> kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+> kubeadm token create --print-join-command
+> }
+[init] Using Kubernetes version: v1.25.3
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.clu                       ster.local master] and IPs [10.96.0.1 172.31.40.224]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [localhost master] and IPs [172.31.40.224 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [localhost master] and IPs [172.31.40.224 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". Th                       is can take up to 4m0s
+[apiclient] All control plane components are healthy after 14.503117 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node master as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kuberne                       tes.io/exclude-from-external-load-balancers]
+[mark-control-plane] Marking the node master as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
+[bootstrap-token] Using token: 7yld2w.yu1aqjhrmkqmzmdr
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate cre                       dentials
+[bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 172.31.40.224:6443 --token 7yld2w.yu1aqjhrmkqmzmdr \
+        --discovery-token-ca-cert-hash sha256:ae32874eda607d3441acb8e10d89de091aa8a994f91f90145f4f05d4e634e852
+poddisruptionbudget.policy/calico-kube-controllers created
+serviceaccount/calico-kube-controllers created
+serviceaccount/calico-node created
+configmap/calico-config created
+customresourcedefinition.apiextensions.k8s.io/bgpconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/bgppeers.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/blockaffinities.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/caliconodestatuses.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/clusterinformations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworkpolicies.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/globalnetworksets.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/hostendpoints.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamblocks.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamconfigs.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipamhandles.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ippools.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/ipreservations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/kubecontrollersconfigurations.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/networkpolicies.crd.projectcalico.org created
+customresourcedefinition.apiextensions.k8s.io/networksets.crd.projectcalico.org created
+clusterrole.rbac.authorization.k8s.io/calico-kube-controllers created
+clusterrole.rbac.authorization.k8s.io/calico-node created
+clusterrolebinding.rbac.authorization.k8s.io/calico-kube-controllers created
+clusterrolebinding.rbac.authorization.k8s.io/calico-node created
+daemonset.apps/calico-node created
+deployment.apps/calico-kube-controllers created
+kubeadm join 172.31.40.224:6443 --token eq9pgi.hfnr6ljroof3icuh --discovery-token-ca-cert-hash sha256:ae32874eda607d3441acb8e10d89de091                       aa8a994f91f90145f4f05d4e634e852
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# alias k='kubectl'
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# k get no
+NAME      STATUS     ROLES           AGE   VERSION
+master    Ready      control-plane   54s   v1.25.3
+node--1   NotReady   <none>          30s   v1.25.3
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# k get po -A
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-58dbc876ff-sc2wf   1/1     Running   0          53s
+kube-system   calico-node-2pxd5                          0/1     Running   0          37s
+kube-system   calico-node-bfh4t                          1/1     Running   0          53s
+kube-system   coredns-565d847f94-l9xc5                   1/1     Running   0          53s
+kube-system   coredns-565d847f94-nh6qx                   1/1     Running   0          53s
+kube-system   etcd-master                                1/1     Running   0          59s
+kube-system   kube-apiserver-master                      1/1     Running   0          59s
+kube-system   kube-controller-manager-master             1/1     Running   0          60s
+kube-system   kube-proxy-h4hfb                           1/1     Running   0          53s
+kube-system   kube-proxy-kc6rr                           1/1     Running   0          37s
+kube-system   kube-scheduler-master                      1/1     Running   0          59s
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# k get no
+NAME      STATUS   ROLES           AGE   VERSION
+master    Ready    control-plane   64s   v1.25.3
+node--1   Ready    <none>          40s   v1.25.3
+root@Master:/home/ubuntu#
+root@Master:/home/ubuntu# git clone https://github.com/testdrivenio/spark-kubernetes.git
+Cloning into 'spark-kubernetes'...
+remote: Enumerating objects: 49, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 49 (delta 2), reused 1 (delta 0), pack-reused 40
+Unpacking objects: 100% (49/49), 237.25 KiB | 386.00 KiB/s, done.
+root@Master:/home/ubuntu# cd spark-kubernetes/
+root@Master:/home/ubuntu/spark-kubernetes# ls
+README.md  create.sh  delete.sh  docker  kubernetes
+root@Master:/home/ubuntu/spark-kubernetes# cd kubernetes/
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls
+_old  minikube-ingress.yaml  spark-master-deployment.yaml  spark-master-service.yaml  spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls -l
+total 20
+drwxr-xr-x 2 root root 4096 Oct 17 17:57 _old
+-rw-r--r-- 1 root root  329 Oct 17 17:57 minikube-ingress.yaml
+-rw-r--r-- 1 root root  501 Oct 17 17:57 spark-master-deployment.yaml
+-rw-r--r-- 1 root root  231 Oct 17 17:57 spark-master-service.yaml
+-rw-r--r-- 1 root root  467 Oct 17 17:57 spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# cd ..
+root@Master:/home/ubuntu/spark-kubernetes# ls
+README.md  create.sh  delete.sh  docker  kubernetes
+root@Master:/home/ubuntu/spark-kubernetes# cd docker/
+root@Master:/home/ubuntu/spark-kubernetes/docker# ls
+Dockerfile  common.sh  spark-defaults.conf  spark-master  spark-worker
+root@Master:/home/ubuntu/spark-kubernetes/docker# cd ..
+root@Master:/home/ubuntu/spark-kubernetes# ls
+README.md  create.sh  delete.sh  docker  kubernetes
+root@Master:/home/ubuntu/spark-kubernetes# cd kubernetes/
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls
+_old  minikube-ingress.yaml  spark-master-deployment.yaml  spark-master-service.yaml  spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls -l
+total 20
+drwxr-xr-x 2 root root 4096 Oct 17 17:57 _old
+-rw-r--r-- 1 root root  329 Oct 17 17:57 minikube-ingress.yaml
+-rw-r--r-- 1 root root  501 Oct 17 17:57 spark-master-deployment.yaml
+-rw-r--r-- 1 root root  231 Oct 17 17:57 spark-master-service.yaml
+-rw-r--r-- 1 root root  467 Oct 17 17:57 spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-service.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-deployment.yaml
+deployment.apps/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-service.yaml
+service/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-worker-deployment.yaml
+deployment.apps/spark-worker created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                            READY   STATUS              RESTARTS   AGE
+spark-master-86cd49fbcf-8sbrb   0/1     ImagePullBackOff    0          48s
+spark-worker-585d6c695-b745z    0/1     ContainerCreating   0          4s
+spark-worker-585d6c695-b9tw2    0/1     ErrImagePull        0          4s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                            READY   STATUS             RESTARTS   AGE
+spark-master-86cd49fbcf-8sbrb   0/1     ImagePullBackOff   0          55s
+spark-worker-585d6c695-b745z    0/1     ErrImagePull       0          11s
+spark-worker-585d6c695-b9tw2    0/1     ErrImagePull       0          11s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k describe po spark-master-86cd49fbcf-8sbrb
+Name:             spark-master-86cd49fbcf-8sbrb
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node--1/172.31.32.120
+Start Time:       Mon, 17 Oct 2022 18:13:27 +0000
+Labels:           component=spark-master
+                  pod-template-hash=86cd49fbcf
+Annotations:      cni.projectcalico.org/containerID: 1a0861e9d6cb8893840c735720b1abfb66a274fe4673f5a626829d649d3c04ff
+                  cni.projectcalico.org/podIP: 192.168.123.193/32
+                  cni.projectcalico.org/podIPs: 192.168.123.193/32
+Status:           Pending
+IP:               192.168.123.193
+IPs:
+  IP:           192.168.123.193
+Controlled By:  ReplicaSet/spark-master-86cd49fbcf
+Containers:
+  spark-master:
+    Container ID:
+    Image:         spark-hadoop
+    Image ID:
+    Ports:         7077/TCP, 8080/TCP
+    Host Ports:    0/TCP, 0/TCP
+    Command:
+      /spark-master
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2vjnc (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+Volumes:
+  kube-api-access-2vjnc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  71s                default-scheduler  Successfully assigned default/spark-master-86cd49fbcf-8sbrb to node--1
+  Normal   Pulling    30s (x3 over 70s)  kubelet            Pulling image "spark-hadoop"
+  Warning  Failed     28s (x3 over 69s)  kubelet            Failed to pull image "spark-hadoop": rpc error: code = Unknown desc = faile                       d to pull and unpack image "docker.io/library/spark-hadoop:latest": failed to resolve reference "docker.io/library/spark-hadoop:latest"                       : pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+  Warning  Failed     28s (x3 over 69s)  kubelet            Error: ErrImagePull
+  Normal   BackOff    3s (x4 over 68s)   kubelet            Back-off pulling image "spark-hadoop"
+  Warning  Failed     3s (x4 over 68s)   kubelet            Error: ImagePullBackOff
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-master-service.yaml
+service "spark-master" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-master-deployment.yaml
+deployment.apps "spark-master" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-worker-deployment.yaml
+deployment.apps "spark-worker" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get all
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   19m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+No resources found in default namespace.
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls -l
+total 20
+drwxr-xr-x 2 root root 4096 Oct 17 17:57 _old
+-rw-r--r-- 1 root root  329 Oct 17 17:57 minikube-ingress.yaml
+-rw-r--r-- 1 root root  495 Oct 17 18:11 spark-master-deployment.yaml
+-rw-r--r-- 1 root root  231 Oct 17 17:57 spark-master-service.yaml
+-rw-r--r-- 1 root root  461 Oct 17 18:11 spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-deployment.yaml
+deployment.apps/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-service.yaml
+service/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-worker-deployment.yaml
+deployment.apps/spark-worker created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                            READY   STATUS              RESTARTS   AGE
+spark-master-674d869889-j9mfz   0/1     ImagePullBackOff    0          20s
+spark-worker-6c957579c-496dp    0/1     ContainerCreating   0          2s
+spark-worker-6c957579c-ch5nk    0/1     ContainerCreating   0          2s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                            READY   STATUS             RESTARTS   AGE
+spark-master-674d869889-j9mfz   0/1     ImagePullBackOff   0          26s
+spark-worker-6c957579c-496dp    0/1     ErrImagePull       0          8s
+spark-worker-6c957579c-ch5nk    0/1     ErrImagePull       0          8s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                            READY   STATUS         RESTARTS   AGE
+spark-master-674d869889-j9mfz   0/1     ErrImagePull   0          35s
+spark-worker-6c957579c-496dp    0/1     ErrImagePull   0          17s
+spark-worker-6c957579c-ch5nk    0/1     ErrImagePull   0          17s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k describe po spark-master-674d869889-j9mfz
+Name:             spark-master-674d869889-j9mfz
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node--1/172.31.32.120
+Start Time:       Mon, 17 Oct 2022 18:17:07 +0000
+Labels:           component=spark-master
+                  pod-template-hash=674d869889
+Annotations:      cni.projectcalico.org/containerID: 477d04a0da225549adca05e75fe79f082f5d01dfc93e4fe3eebf0618b29fe819
+                  cni.projectcalico.org/podIP: 192.168.123.196/32
+                  cni.projectcalico.org/podIPs: 192.168.123.196/32
+Status:           Pending
+IP:               192.168.123.196
+IPs:
+  IP:           192.168.123.196
+Controlled By:  ReplicaSet/spark-master-674d869889
+Containers:
+  spark-master:
+    Container ID:
+    Image:         mjhea0/spark-hadoop
+    Image ID:
+    Ports:         7077/TCP, 8080/TCP
+    Host Ports:    0/TCP, 0/TCP
+    Command:
+      /spark-master
+    State:          Waiting
+      Reason:       ErrImagePull
+    Ready:          False
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-vvj6f (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+Volumes:
+  kube-api-access-vvj6f:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  42s                default-scheduler  Successfully assigned default/spark-master-674d869889-j9mfz to node--1
+  Normal   Pulling    28s (x2 over 41s)  kubelet            Pulling image "mjhea0/spark-hadoop"
+  Warning  Failed     26s (x2 over 39s)  kubelet            Failed to pull image "mjhea0/spark-hadoop": rpc error: code = NotFound desc                        = failed to pull and unpack image "docker.io/mjhea0/spark-hadoop:latest": failed to resolve reference "docker.io/mjhea0/spark-hadoop:l                       atest": docker.io/mjhea0/spark-hadoop:latest: not found
+  Warning  Failed     26s (x2 over 39s)  kubelet            Error: ErrImagePull
+  Normal   BackOff    13s (x2 over 39s)  kubelet            Back-off pulling image "mjhea0/spark-hadoop"
+  Warning  Failed     13s (x2 over 39s)  kubelet            Error: ImagePullBackOff
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-master-deployment.yaml
+deployment.apps "spark-master" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-master-service.yaml
+service "spark-master" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k delete -f spark-worker-deployment.yaml
+deployment.apps "spark-worker" deleted
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+No resources found in default namespace.
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-deployment.yaml
+deployment.apps/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-service.yaml
+service/spark-master created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-worker-deployment.yaml
+deployment.apps/spark-worker created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS              RESTARTS   AGE
+spark-master-d66df4474-68292   0/1     ContainerCreating   0          23s
+spark-worker-bdb8df75d-df26c   0/1     ContainerCreating   0          1s
+spark-worker-bdb8df75d-pmdjd   0/1     ContainerCreating   0          1s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS              RESTARTS   AGE
+spark-master-d66df4474-68292   0/1     ContainerCreating   0          26s
+spark-worker-bdb8df75d-df26c   0/1     ContainerCreating   0          4s
+spark-worker-bdb8df75d-pmdjd   0/1     ContainerCreating   0          4s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS   AGE
+spark-master-d66df4474-68292   1/1     Running   0          32s
+spark-worker-bdb8df75d-df26c   1/1     Running   0          10s
+spark-worker-bdb8df75d-pmdjd   1/1     Running   0          10s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get svc
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP             24m
+spark-master   ClusterIP   10.96.208.139   <none>        8080/TCP,7077/TCP   25s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi spark-master-service.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f spark-master-service.yaml
+service/spark-master configured
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get svc
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP                         31m
+spark-master   NodePort    10.96.208.139   <none>        8080:30675/TCP,7077:30455/TCP   6m48s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS        AGE
+spark-master-d66df4474-68292   1/1     Running   0               11m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (3m29s ago)   11m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (3m44s ago)   11m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k describe po spark-worker-bdb8df75d-pmdjd
+Name:             spark-worker-bdb8df75d-pmdjd
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             node--1/172.31.32.120
+Start Time:       Mon, 17 Oct 2022 18:21:16 +0000
+Labels:           component=spark-worker
+                  pod-template-hash=bdb8df75d
+Annotations:      cni.projectcalico.org/containerID: 49f7049da5555129eff038e7fa6e2f409c0eb9af056c076b079d95a72db61f26
+                  cni.projectcalico.org/podIP: 192.168.123.201/32
+                  cni.projectcalico.org/podIPs: 192.168.123.201/32
+Status:           Running
+IP:               192.168.123.201
+IPs:
+  IP:           192.168.123.201
+Controlled By:  ReplicaSet/spark-worker-bdb8df75d
+Containers:
+  spark-worker:
+    Container ID:  containerd://b689d0c43224753ce9deae6423eeaf53e96a0a2cae3c7c1dd3296485237fc3e5
+    Image:         mjhea0/spark-hadoop:3.2.0
+    Image ID:      docker.io/mjhea0/spark-hadoop@sha256:040e31987a6c77e9d8bafed2e3f87c31adf4c1eae6671021da61b07212026522
+    Port:          8081/TCP
+    Host Port:     0/TCP
+    Command:
+      /spark-worker
+    State:          Running
+      Started:      Mon, 17 Oct 2022 18:31:15 +0000
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 17 Oct 2022 18:27:49 +0000
+      Finished:     Mon, 17 Oct 2022 18:28:34 +0000
+    Ready:          True
+    Restart Count:  6
+    Requests:
+      cpu:        100m
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2r2w7 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-2r2w7:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                     From               Message
+  ----     ------     ----                    ----               -------
+  Normal   Scheduled  11m                     default-scheduler  Successfully assigned default/spark-worker-bdb8df75d-pmdjd to node--1
+  Normal   Pulled     6m58s (x5 over 11m)     kubelet            Container image "mjhea0/spark-hadoop:3.2.0" already present on machine
+  Normal   Created    6m58s (x5 over 11m)     kubelet            Created container spark-worker
+  Normal   Started    6m58s (x5 over 11m)     kubelet            Started container spark-worker
+  Warning  BackOff    5m21s (x11 over 9m46s)  kubelet            Back-off restarting failed container
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS        AGE
+spark-master-d66df4474-68292   1/1     Running   0               12m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (4m26s ago)   11m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (4m41s ago)   11m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k exec spark-master-d66df4474-68292 -it -- /bin/bash
+root@spark-master-d66df4474-68292:/# ls
+bin   common.sh  etc   lib    media  opt   root  sbin          spark-worker  sys  usr
+boot  dev        home  lib64  mnt    proc  run   spark-master  srv           tmp  var
+root@spark-master-d66df4474-68292:/# ls -l
+total 80
+drwxr-xr-x   1 root root 4096 Nov 17  2021 bin
+drwxr-xr-x   2 root root 4096 Oct  3  2021 boot
+-rwxr-xr-x   1 root root   72 Nov 26  2021 common.sh
+drwxr-xr-x   5 root root  360 Oct 17 18:21 dev
+drwxr-xr-x   1 root root 4096 Oct 17 18:21 etc
+drwxr-xr-x   2 root root 4096 Oct  3  2021 home
+drwxr-xr-x   1 root root 4096 Nov 15  2021 lib
+drwxr-xr-x   2 root root 4096 Nov 15  2021 lib64
+drwxr-xr-x   2 root root 4096 Nov 15  2021 media
+drwxr-xr-x   2 root root 4096 Nov 15  2021 mnt
+drwxr-xr-x   1 root root 4096 Nov 27  2021 opt
+dr-xr-xr-x 226 root root    0 Oct 17 18:21 proc
+drwx------   1 root root 4096 Nov 17  2021 root
+drwxr-xr-x   1 root root 4096 Oct 17 18:21 run
+drwxr-xr-x   1 root root 4096 Nov 17  2021 sbin
+-rwxr-xr-x   1 root root  190 Nov 26  2021 spark-master
+-rwxr-xr-x   1 root root  340 Nov 26  2021 spark-worker
+drwxr-xr-x   2 root root 4096 Nov 15  2021 srv
+dr-xr-xr-x  13 root root    0 Oct 17 18:20 sys
+drwxrwxrwt   1 root root 4096 Nov 17  2021 tmp
+drwxr-xr-x   1 root root 4096 Nov 15  2021 usr
+drwxr-xr-x   1 root root 4096 Nov 15  2021 var
+root@spark-master-d66df4474-68292:/# exit
+exit
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS        AGE
+spark-master-d66df4474-68292   1/1     Running   0               16m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (8m42s ago)   16m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (8m57s ago)   16m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl cluster info]
+error: unknown command "cluster" for "kubectl"
+
+Did you mean this?
+        cluster-info
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl cluster-info
+Kubernetes control plane is running at https://172.31.40.224:6443
+CoreDNS is running at https://172.31.40.224:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po -o wide
+NAME                           READY   STATUS    RESTARTS      AGE   IP                NODE      NOMINATED NODE   READINESS GATES
+spark-master-d66df4474-68292   1/1     Running   0             19m   192.168.123.199   node--1   <none>           <none>
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (11m ago)   19m   192.168.123.200   node--1   <none>           <none>
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (12m ago)   19m   192.168.123.201   node--1   <none>           <none>
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po -A -o wide
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS      AGE   IP                NODE      NOMINATED NODE   READINESS GATES
+default       spark-master-d66df4474-68292               1/1     Running   0             21m   192.168.123.199   node--1   <none>           <none>
+default       spark-worker-bdb8df75d-df26c               1/1     Running   6 (13m ago)   20m   192.168.123.200   node--1   <none>           <none>
+default       spark-worker-bdb8df75d-pmdjd               1/1     Running   6 (13m ago)   20m   192.168.123.201   node--1   <none>           <none>
+kube-system   calico-kube-controllers-58dbc876ff-sc2wf   1/1     Running   0             45m   192.168.219.67    master    <none>           <none>
+kube-system   calico-node-2pxd5                          1/1     Running   0             44m   172.31.32.120     node--1   <none>           <none>
+kube-system   calico-node-bfh4t                          1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+kube-system   coredns-565d847f94-l9xc5                   1/1     Running   0             45m   192.168.219.66    master    <none>           <none>
+kube-system   coredns-565d847f94-nh6qx                   1/1     Running   0             45m   192.168.219.65    master    <none>           <none>
+kube-system   etcd-master                                1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+kube-system   kube-apiserver-master                      1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+kube-system   kube-controller-manager-master             1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+kube-system   kube-proxy-h4hfb                           1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+kube-system   kube-proxy-kc6rr                           1/1     Running   0             44m   172.31.32.120     node--1   <none>           <none>
+kube-system   kube-scheduler-master                      1/1     Running   0             45m   172.31.40.224     master    <none>           <none>
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+namespace/kubernetes-dashboard created
+serviceaccount/kubernetes-dashboard created
+service/kubernetes-dashboard created
+secret/kubernetes-dashboard-certs created
+secret/kubernetes-dashboard-csrf created
+secret/kubernetes-dashboard-key-holder created
+configmap/kubernetes-dashboard-settings created
+role.rbac.authorization.k8s.io/kubernetes-dashboard created
+clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard created
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+deployment.apps/kubernetes-dashboard created
+service/dashboard-metrics-scraper created
+deployment.apps/dashboard-metrics-scraper created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi abcd.yml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi abcd2.yml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f abcd.yml
+serviceaccount/admin-user created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f abcd2.yml
+clusterrolebinding.rbac.authorization.k8s.io/admin-user created
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl -n kubernetes-dashboard create token admin-user
+eyJhbGciOiJSUzI1NiIsImtpZCI6ImthcWRXaEptWXdCaWZ2SnMzQThNclBLN2ZJYi11bENudHNJQUJMTE5JdWsifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjY2MDM2NDMyLCJpYXQiOjE2NjYwMzI4MzIsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiM2U5OTIwYWEtYTg1MS00N2ViLThlZmYtNzM1OTZhMmQxOWY0In19LCJuYmYiOjE2NjYwMzI4MzIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.W7WDFPnzvfdplD6wArePrAOeqVusYw5UrjJiqvo2mN6aOHrhDOGedlicD1EWqrgg1IHH_YOh5R6Wc7iE0DQv1FGiXnnf4Xa0QRC4INm54LI1jTQO5EU72PS5BBQrmiZyqCnmjO9ijFJaLxJwVD5WhbpxKr7Tnu7I1hFNeAEjj5NokZwQ0m7EjxB91yEYXGF82Q2f-c4z5VUPKvHbZ5GBHI0uP_VjTM7_k8NmkvD2FwVzWXz3SQZ4jvgjmvFzfazH9qAA6ZVlfCBdNBMCVWnwCP9PhN73fOKK404U1pz1U6n1sNvjPg5O8Mp5r6J_q_ZWCHAkX4pCFllUlx1MjfhBew
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS      AGE
+spark-master-d66df4474-68292   1/1     Running   0             37m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (29m ago)   37m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (30m ago)   37m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get ns
+NAME                   STATUS   AGE
+default                Active   62m
+kube-node-lease        Active   62m
+kube-public            Active   62m
+kube-system            Active   62m
+kubernetes-dashboard   Active   6m45s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get svc
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP                         63m
+spark-master   NodePort    10.96.208.139   <none>        8080:30675/TCP,7077:30455/TCP   39m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get svc -A
+NAMESPACE              NAME                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
+default                kubernetes                  ClusterIP   10.96.0.1        <none>        443/TCP                         63m
+default                spark-master                NodePort    10.96.208.139    <none>        8080:30675/TCP,7077:30455/TCP   39m
+kube-system            kube-dns                    ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP          63m
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.105.100.207   <none>        8000/TCP                        8m20s
+kubernetes-dashboard   kubernetes-dashboard        ClusterIP   10.108.53.120    <none>        443/TCP                         8m20s
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls
+_old  abcd.yml  abcd2.yml  minikube-ingress.yaml  spark-master-deployment.yaml  spark-master-service.yaml  spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls -l
+total 28
+drwxr-xr-x 2 root root 4096 Oct 17 17:57 _old
+-rw-r--r-- 1 root root   99 Oct 17 18:52 abcd.yml
+-rw-r--r-- 1 root root  276 Oct 17 18:53 abcd2.yml
+-rw-r--r-- 1 root root  329 Oct 17 17:57 minikube-ingress.yaml
+-rw-r--r-- 1 root root  508 Oct 17 18:20 spark-master-deployment.yaml
+-rw-r--r-- 1 root root  248 Oct 17 18:27 spark-master-service.yaml
+-rw-r--r-- 1 root root  474 Oct 17 18:20 spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi abcd.yml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f abcd.yml
+serviceaccount/admin-user unchanged
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# vi abcd2.yml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f abcd2.yml
+clusterrolebinding.rbac.authorization.k8s.io/admin-user unchanged
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k apply -f abcd2.yml
+clusterrolebinding.rbac.authorization.k8s.io/admin-user unchanged
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get crb
+error: the server doesn't have a resource type "crb"
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get clusterrolebinding
+NAME                                                   ROLE                                                                               AGE
+admin-user                                             ClusterRole/cluster-admin                                                          14m
+calico-kube-controllers                                ClusterRole/calico-kube-controllers                                                71m
+calico-node                                            ClusterRole/calico-node                                                            71m
+cluster-admin                                          ClusterRole/cluster-admin                                                          71m
+dashboard-admin                                        ClusterRole/cluster-admin–serviceaccount=default:dashboard                         11m
+kubeadm:get-nodes                                      ClusterRole/kubeadm:get-nodes                                                      71m
+kubeadm:kubelet-bootstrap                              ClusterRole/system:node-bootstrapper                                               71m
+kubeadm:node-autoapprove-bootstrap                     ClusterRole/system:certificates.k8s.io:certificatesigningrequests:nodeclient       71m
+kubeadm:node-autoapprove-certificate-rotation          ClusterRole/system:certificates.k8s.io:certificatesigningrequests:selfnodeclient   71m
+kubeadm:node-proxier                                   ClusterRole/system:node-proxier                                                    71m
+kubernetes-dashboard                                   ClusterRole/kubernetes-dashboard                                                   15m
+system:basic-user                                      ClusterRole/system:basic-user                                                      71m
+system:controller:attachdetach-controller              ClusterRole/system:controller:attachdetach-controller                              71m
+system:controller:certificate-controller               ClusterRole/system:controller:certificate-controller                               71m
+system:controller:clusterrole-aggregation-controller   ClusterRole/system:controller:clusterrole-aggregation-controller                   71m
+system:controller:cronjob-controller                   ClusterRole/system:controller:cronjob-controller                                   71m
+system:controller:daemon-set-controller                ClusterRole/system:controller:daemon-set-controller                                71m
+system:controller:deployment-controller                ClusterRole/system:controller:deployment-controller                                71m
+system:controller:disruption-controller                ClusterRole/system:controller:disruption-controller                                71m
+system:controller:endpoint-controller                  ClusterRole/system:controller:endpoint-controller                                  71m
+system:controller:endpointslice-controller             ClusterRole/system:controller:endpointslice-controller                             71m
+system:controller:endpointslicemirroring-controller    ClusterRole/system:controller:endpointslicemirroring-controller                    71m
+system:controller:ephemeral-volume-controller          ClusterRole/system:controller:ephemeral-volume-controller                          71m
+system:controller:expand-controller                    ClusterRole/system:controller:expand-controller                                    71m
+system:controller:generic-garbage-collector            ClusterRole/system:controller:generic-garbage-collector                            71m
+system:controller:horizontal-pod-autoscaler            ClusterRole/system:controller:horizontal-pod-autoscaler                            71m
+system:controller:job-controller                       ClusterRole/system:controller:job-controller                                       71m
+system:controller:namespace-controller                 ClusterRole/system:controller:namespace-controller                                 71m
+system:controller:node-controller                      ClusterRole/system:controller:node-controller                                      71m
+system:controller:persistent-volume-binder             ClusterRole/system:controller:persistent-volume-binder                             71m
+system:controller:pod-garbage-collector                ClusterRole/system:controller:pod-garbage-collector                                71m
+system:controller:pv-protection-controller             ClusterRole/system:controller:pv-protection-controller                             71m
+system:controller:pvc-protection-controller            ClusterRole/system:controller:pvc-protection-controller                            71m
+system:controller:replicaset-controller                ClusterRole/system:controller:replicaset-controller                                71m
+system:controller:replication-controller               ClusterRole/system:controller:replication-controller                               71m
+system:controller:resourcequota-controller             ClusterRole/system:controller:resourcequota-controller                             71m
+system:controller:root-ca-cert-publisher               ClusterRole/system:controller:root-ca-cert-publisher                               71m
+system:controller:route-controller                     ClusterRole/system:controller:route-controller                                     71m
+system:controller:service-account-controller           ClusterRole/system:controller:service-account-controller                           71m
+system:controller:service-controller                   ClusterRole/system:controller:service-controller                                   71m
+system:controller:statefulset-controller               ClusterRole/system:controller:statefulset-controller                               71m
+system:controller:ttl-after-finished-controller        ClusterRole/system:controller:ttl-after-finished-controller                        71m
+system:controller:ttl-controller                       ClusterRole/system:controller:ttl-controller                                       71m
+system:coredns                                         ClusterRole/system:coredns                                                         71m
+system:discovery                                       ClusterRole/system:discovery                                                       71m
+system:kube-controller-manager                         ClusterRole/system:kube-controller-manager                                         71m
+system:kube-dns                                        ClusterRole/system:kube-dns                                                        71m
+system:kube-scheduler                                  ClusterRole/system:kube-scheduler                                                  71m
+system:monitoring                                      ClusterRole/system:monitoring                                                      71m
+system:node                                            ClusterRole/system:node                                                            71m
+system:node-proxier                                    ClusterRole/system:node-proxier                                                    71m
+system:public-info-viewer                              ClusterRole/system:public-info-viewer                                              71m
+system:service-account-issuer-discovery                ClusterRole/system:service-account-issuer-discovery                                71m
+system:volume-scheduler                                ClusterRole/system:volume-scheduler                                                71m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ubectl -n kubernetes-dashboard create token admin-user
+
+Command 'ubectl' not found, did you mean:
+
+  command 'kubectl' from snap kubectl (1.25.3)
+
+See 'snap info <snapname>' for additional versions.
+
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl -n kubernetes-dashboard create token admin-user
+eyJhbGciOiJSUzI1NiIsImtpZCI6ImthcWRXaEptWXdCaWZ2SnMzQThNclBLN2ZJYi11bENudHNJQUJMTE5JdWsifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjY2MDM3MzMzLCJpYXQiOjE2NjYwMzM3MzMsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJhZG1pbi11c2VyIiwidWlkIjoiM2U5OTIwYWEtYTg1MS00N2ViLThlZmYtNzM1OTZhMmQxOWY0In19LCJuYmYiOjE2NjYwMzM3MzMsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbi11c2VyIn0.Qx5jOqBFNWtj0vmOnsLCBiXsvMM_mrCnQUbZWBT1tJrrSQ462y5berFT_I1yMy2vXVL53LOnzv6ThndcLqZTR-q3MerzECjBL6PSnl2ewDSaVBe4w_vHE5nl3Aqt5ATUJJo1C85IzKtqun2pqG7Gi2DYJlV36f7fz0I-uNBb6cJnceMdfIpxJR9TyX8gI-0l2RfqrB17sJlesXHdCGhec_yrbjcLpEGnyn0fBYSxrC3xQBYp_GYzIT_h7ygz1uCVrglQTY7rA8meQcowbSVYk8bh6p8UAKxohandt31moT6PLBv5Mdi5xLDjCp5LUQlib8is7036lk-IIhtZmZXahg
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get svc -A
+NAMESPACE              NAME                        TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                         AGE
+default                kubernetes                  ClusterIP   10.96.0.1        <none>        443/TCP                         82m
+default                spark-master                NodePort    10.96.208.139    <none>        8080:30675/TCP,7077:30455/TCP   57m
+kube-system            kube-dns                    ClusterIP   10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP          82m
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.105.100.207   <none>        8000/TCP                        26m
+kubernetes-dashboard   kubernetes-dashboard        ClusterIP   10.108.53.120    <none>        443/TCP                         26m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# curl 10.105.100.207:8000
+^C
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl get po
+NAME                           READY   STATUS    RESTARTS      AGE
+spark-master-d66df4474-68292   1/1     Running   0             63m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (55m ago)   63m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (55m ago)   63m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get no
+NAME      STATUS   ROLES           AGE   VERSION
+master    Ready    control-plane   87m   v1.25.3
+node--1   Ready    <none>          87m   v1.25.3
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: active (running) since Mon 2022-10-17 17:56:37 UTC; 1h 28min ago
+       Docs: https://kubernetes.io/docs/home/
+   Main PID: 5906 (kubelet)
+      Tasks: 16 (limit: 4689)
+     Memory: 43.0M
+     CGroup: /system.slice/kubelet.service
+             └─5906 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/li>
+
+Oct 17 19:18:10 Master kubelet[5906]: I1017 19:18:10.328742    5906 log.go:198] http: TLS handshake error from 185.165.190.17:53058: EOF
+Oct 17 19:18:11 Master kubelet[5906]: I1017 19:18:11.691279    5906 log.go:198] http: TLS handshake error from 185.165.190.17:53714: EOF
+Oct 17 19:18:12 Master kubelet[5906]: I1017 19:18:12.188725    5906 log.go:198] http: TLS handshake error from 185.165.190.17:54952: EOF
+Oct 17 19:18:13 Master kubelet[5906]: I1017 19:18:13.607107    5906 log.go:198] http: TLS handshake error from 185.165.190.17:55476: EOF
+Oct 17 19:18:13 Master kubelet[5906]: I1017 19:18:13.993983    5906 log.go:198] http: TLS handshake error from 185.165.190.17:56756: tls: client offered only>
+Oct 17 19:18:14 Master kubelet[5906]: I1017 19:18:14.710728    5906 log.go:198] http: TLS handshake error from 185.165.190.17:57440: tls: unsupported SSLv2 h>
+Oct 17 19:18:15 Master kubelet[5906]: I1017 19:18:15.426376    5906 log.go:198] http: TLS handshake error from 185.165.190.17:58232: tls: client offered only>
+Oct 17 19:18:16 Master kubelet[5906]: I1017 19:18:16.662857    5906 log.go:198] http: TLS handshake error from 185.165.190.17:59488: tls: client offered only>
+Oct 17 19:18:33 Master kubelet[5906]: I1017 19:18:33.027183    5906 log.go:198] http: TLS handshake error from 185.165.190.17:46988: tls: no cipher suite sup>
+Oct 17 19:18:33 Master kubelet[5906]: I1017 19:18:33.607124    5906 log.go:198] http: TLS handshake error from 185.165.190.17:47356: tls: no cipher suite sup>
+
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# kubectl get secret $(kubectl get serviceaccount admin-user -n kubernetes-dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# k get po
+NAME                           READY   STATUS    RESTARTS      AGE
+spark-master-d66df4474-68292   1/1     Running   0             70m
+spark-worker-bdb8df75d-df26c   1/1     Running   6 (62m ago)   70m
+spark-worker-bdb8df75d-pmdjd   1/1     Running   6 (62m ago)   70m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls
+_old  abcd.yml  abcd2.yml  minikube-ingress.yaml  spark-master-deployment.yaml  spark-master-service.yaml  spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ls -l
+total 28
+drwxr-xr-x 2 root root 4096 Oct 17 17:57 _old
+-rw-r--r-- 1 root root   99 Oct 17 19:06 abcd.yml
+-rw-r--r-- 1 root root  270 Oct 17 19:06 abcd2.yml
+-rw-r--r-- 1 root root  329 Oct 17 17:57 minikube-ingress.yaml
+-rw-r--r-- 1 root root  508 Oct 17 18:20 spark-master-deployment.yaml
+-rw-r--r-- 1 root root  248 Oct 17 18:27 spark-master-service.yaml
+-rw-r--r-- 1 root root  474 Oct 17 18:20 spark-worker-deployment.yaml
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# ]cat spark-master-deployment.yaml
+
+Command ']cat' not found, but there are 17 similar ones.
+
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# cat spark-master-deployment.yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: spark-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: spark-master
+  template:
+    metadata:
+      labels:
+        component: spark-master
+    spec:
+      containers:
+        - name: spark-master
+          image: mjhea0/spark-hadoop:3.2.0
+          command: ["/spark-master"]
+          ports:
+            - containerPort: 7077
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# cat spark-master-service.yaml
+kind: Service
+apiVersion: v1
+metadata:
+  name: spark-master
+spec:
+  type: NodePort
+  ports:
+    - name: webui
+      port: 8080
+      targetPort: 8080
+    - name: spark
+      port: 7077
+      targetPort: 7077
+  selector:
+    component: spark-master
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes# cat spark-worker-deployment.yaml
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: spark-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: spark-worker
+  template:
+    metadata:
+      labels:
+        component: spark-worker
+    spec:
+      containers:
+        - name: spark-worker
+          image: mjhea0/spark-hadoop:3.2.0
+          command: ["/spark-worker"]
+          ports:
+            - containerPort: 8081
+          resources:
+            requests:
+              cpu: 100m
+root@Master:/home/ubuntu/spark-kubernetes/kubernetes#
