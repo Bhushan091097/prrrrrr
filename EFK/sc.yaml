@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: manual
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: io1
+  iopsPerGB: '10'
+  fsType: xfs
+allowVolumeExpansion: true
+mountOptions:
+- debug
+volumeBindingMode: Immediate
